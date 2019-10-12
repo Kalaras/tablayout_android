@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- El tab layout es para mostrar los tab -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="?attr/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize"
+        app:tabSelectedTextColor="#fff"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar" />
+
+    <!-- El ViewPager es para mostrar los fragment de cada tab -->
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager" />
+
+</RelativeLayout>
